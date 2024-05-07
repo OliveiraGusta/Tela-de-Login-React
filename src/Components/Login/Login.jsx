@@ -14,7 +14,7 @@ const Login = () => {
           <FormLoginRegister isRegistered />
         </div>
       </div>
-      <div id="image-login-register" />
+      <div id="image-login" />
     </div>
   )
 }

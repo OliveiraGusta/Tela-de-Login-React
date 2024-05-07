@@ -12,7 +12,7 @@ function HeadLoginRegister(props) {
       {props.isRegistered ? 
       <p id="head-subtitle-login-register">Não tem uma conta? <a href="/cadastro">CADASTRE-SE AGORA</a></p>
         :
-      <p id="head-subtitle-login-register">Já tem uma conta? <a href="/login">FAÇA SEU LOGIN</a></p>
+      <p id="head-subtitle-login-register">Já tem uma conta? <a href="/">FAÇA SEU LOGIN</a></p>
       }
     </div> 
   )

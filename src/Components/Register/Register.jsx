@@ -5,7 +5,7 @@ import HeadLoginRegister from '../HeadLoginRegister/HeadLoginRegister';
 const Register = () => {
     return (
         <div className="container-login-register">
-            <div id="image-login-register" />
+            <div id="image-register" />
             <div id="ui-login-register">
             <p>Bem-vindo(a) a plataforma <b>React</b> Químico</p>
                 <div className="head-login-register">

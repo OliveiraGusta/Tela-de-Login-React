@@ -18,7 +18,7 @@
     flex-grow: 2;
   }
   
-  #image-login-register {
+  #image-register {
     flex: 5;
     background-image: url("./src/assets/images/Quimicos-Cadastro.png");
     background-size: cover;
