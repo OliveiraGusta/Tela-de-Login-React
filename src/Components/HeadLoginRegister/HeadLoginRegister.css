@@ -1,0 +1,27 @@
+.content-head-login-register{
+    display: flex;
+    flex-direction: column;
+}
+
+.head-theme-change{
+    align-self: flex-end;
+}
+
+#head-logo-react-quimico{
+    width: 300px;
+}   
+
+#head-subtitle-login-register{
+    margin-top: -1vh;
+    margin-bottom: 5vh;
+}
+#head-subtitle-login-register a{
+    font-weight: bold;
+   text-decoration: none;
+
+}
+
+#head-subtitle-login-register a:hover{
+    text-decoration: underline;
+
+}
