@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link }from "react-router-dom";
 import "./FormLoginRegister.css"
 
 import PersonIcon from '@mui/icons-material/Person';
@@ -45,9 +46,9 @@ const FormLoginRegister = (props) => {
                             <input type="checkbox" />
                             LEMBRAR DE MIM
                         </div>
-                        <a href="/esqueceu-senha">
+                        <Link to="/esqueceu-senha">
                             ESQUECEU SUA SENHA?
-                        </a>
+                        </Link>
                     </div>
                     :
                     <div className="input-field">

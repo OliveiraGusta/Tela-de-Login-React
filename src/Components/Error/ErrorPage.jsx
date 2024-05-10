@@ -1,5 +1,7 @@
 import "./ErrorPage.css";
+import { Link } from "react-router-dom"
 import ErrorIcon from '@mui/icons-material/Error';
+
 
 const ErrorPage = () => {
   return (
@@ -8,7 +10,7 @@ const ErrorPage = () => {
         <div id="msg-error">
           <p>Esta não é a página da web que você está procurando</p>
           <h2>Error 404 <ErrorIcon /></h2>
-          <a href="/">Volte para o começo</a>
+          <Link to="/">Volte para o começo</Link>
         </div>
       </div>
       <div id="image-error" />
