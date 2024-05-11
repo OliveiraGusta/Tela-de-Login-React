@@ -2,6 +2,8 @@ import { useState } from "react";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
+import { ButtonChange } from "./styles";
+
 var isThemeLight = true;
 
 function ThemeChangeButton(props) {
@@ -15,7 +17,7 @@ function ThemeChangeButton(props) {
 
   return (
     <div>
-     <button onClick={ChangeIcon}>{iconTheme}</button>
+     <ButtonChange onClick={ChangeIcon}>{iconTheme}</ButtonChange>
     </div>
   )
 }

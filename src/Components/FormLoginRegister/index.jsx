@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link }from "react-router-dom";
-import "./FormLoginRegister.css"
+import { BtnLoginRegister, Container, InputField, RecallForget } from './styles';
 
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
@@ -25,48 +25,47 @@ const FormLoginRegister = (props) => {
             : alert("SENHAS DIFERENTES: " + password + " != " + confirmPassword);
     }
 
-
     return (
-        <div className="container">
+        <Container>
             <form onSubmit={handleSubmit}>
                 <h2> {props.isRegistered ? "Faça seu Login" : "Cadastre-se"}</h2>
-                <div className="input-field">
+                <InputField>
                     <input type="email" placeholder="Seu e-mail" required
                         onChange={(e) => { setEmail(e.target.value); }} />
-                    <PersonIcon className="icon" />
-                </div>
-                <div className="input-field">
+                    <PersonIcon/>
+                </InputField>
+                <InputField>
                     <input type="text" placeholder="Sua senha" required
                         onChange={(e) => { setPassword(e.target.value) }} />
-                    <LockIcon className="icon" />
-                </div>
+                    <LockIcon/>
+                </InputField>
                 {props.isRegistered ?
-                    <div className="recall-forget">
-                        <div>
+                    <RecallForget>
+                        <Container>
                             <input type="checkbox" />
                             LEMBRAR DE MIM
-                        </div>
+                        </Container>
                         <Link to="/esqueceu-senha">
                             ESQUECEU SUA SENHA?
                         </Link>
-                    </div>
+                    </RecallForget>
                     :
-                    <div className="input-field">
+                    <InputField>
                         <input type="text" placeholder="Confirme sua senha" required
                             onChange={(e) => { setConfirmPassword(e.target.value); }} />
-                        <LockPersonIcon className="icon" />
-                    </div>
+                        <LockPersonIcon/>
+                    </InputField>
                 }
 
-                <div id="btn-login-register">
+                <BtnLoginRegister>
                     <button type="submit">{props.isRegistered ? "Logar" : "Cadastre-se"}</button>
-                </div>
+                </BtnLoginRegister>
 
             </form>
 
 
 
-        </div>
+        </Container>
 
     )
 
