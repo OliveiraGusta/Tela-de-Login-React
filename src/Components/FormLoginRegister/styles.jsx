@@ -18,7 +18,7 @@ export const InputField = styled.div`
         height: 100%;
         background-color: transparent !important;
         outline: none;
-        border: 1px solid var(--LightBlue);
+        border: 1px solid ${props => props.theme.colors.primary};
         border-radius: 40px;
         font-size: 16px;
         padding: 20px;
@@ -60,14 +60,14 @@ export const BtnLoginRegister = styled.div`
     
     & button{
         padding: 15px 40px ;
-        background-color: var(--LightBlue);
+        background-color: ${props => props.theme.colors.button};
         border: none;
         border-radius: 40px;
-        color: var(--White);
+        color: ${props => props.theme.colors.buttonText};
         font-size: 20px;
         cursor: pointer;
     }
     & button:hover{
-        background-color: var(--LightBlueSecondary);
+        background-color: ${props => props.theme.colors.buttonHover};
     }
 `;

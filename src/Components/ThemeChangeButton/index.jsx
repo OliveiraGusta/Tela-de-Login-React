@@ -1,23 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { ButtonChange } from "./styles";
+import { ThemeChangeContext } from "../../context/ThemeChangeContext";
 
-var isThemeLight = true;
 
-function ThemeChangeButton(props) {
-  
-  const [iconTheme, setIconTheme] = useState(isThemeLight ? <DarkModeIcon/> : <LightModeIcon/> )
+function ThemeChangeButton() {
+  const { theme, themeChange } = useContext(ThemeChangeContext);
+  const [iconTheme, setIconTheme] = useState(theme.title === 'light' ? <DarkModeIcon/> : <LightModeIcon/> )
 
-  function ChangeIcon() {
-    setIconTheme(isThemeLight ? <LightModeIcon/> :  <DarkModeIcon/>);
-    isThemeLight ?  isThemeLight = false :  isThemeLight = true; 
-    }
+  const toggleTheme = () =>{
+    themeChange();
+    setIconTheme(theme.title === 'light' ?  <LightModeIcon/> : <DarkModeIcon/>)
+  }
 
   return (
     <div>
-     <ButtonChange onClick={ChangeIcon}>{iconTheme}</ButtonChange>
+     <ButtonChange onClick={toggleTheme}>{iconTheme}</ButtonChange>
     </div>
   )
 }
