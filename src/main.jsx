@@ -1,45 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ThemeChangeProvider } from './context/ThemeChangeContext.jsx';
-   
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import App from './App.jsx'
-import ErrorPage from './components/Error'
-import Login from './components/Login'
-import Register from './components/Register'
 
+//Theme styles
+import { ThemeChangeProvider } from './context/ThemeChangeContext';
+import GlobalStyle from "./styles/global";
 
-// Routers = / /error /login /cadastro /esqueceu-senha
-const router = createBrowserRouter([
-
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/',
-        element: <Navigate to='/login' />,
-      },
-      {
-        path: '/login',
-        element: <Login />,
-      },
-     
-      {
-        path: '/cadastro',
-        element: <Register />,
-      },
-    ]
-  },
-
-]);
+//Router configuration
+import { BrowserRouter } from 'react-router-dom';
+import routes from './routes';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeChangeProvider>
-      <RouterProvider router={router} />
+      <GlobalStyle />
+      <BrowserRouter>
+        {routes}
+      </BrowserRouter>
     </ThemeChangeProvider>
   </React.StrictMode>
-)
+);
